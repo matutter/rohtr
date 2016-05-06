@@ -1,0 +1,23 @@
+{
+  "name": "rohtr",
+  "version": "1.0.0",
+  "description": "nodejs http site router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matutter/rohtr.git"
+  },
+  "author": "mat utter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matutter/rohtr/issues"
+  },
+  "homepage": "https://github.com/matutter/rohtr#readme",
+  "dependencies": {
+    "pug": "^2.0.0-alpha6",
+    "q": "^1.4.1"
+  }
+}
