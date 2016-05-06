@@ -1,23 +1,26 @@
 const walk = require('rohtr-walk')
 
-function rohtr(options) {
-	options = options || {}
-	this.roots = options.roots;
+function rohtr(o) {
+	if(!o) 		throw 'Object expected'
 
-	if(typeof this.roots === 'string')
-		this.roots = [this.roots]
+	var roots = o.roots
+	var _rewrite = o.rewrite
 
-	if(!this.roots) throw 'Object "roots" expected'
+	if(typeof roots === 'string')
+		roots = [roots]
 
-	this.roots.map(_root => walk({root:_root}))
+	if(!roots) throw 'Object "roots" expected'
 
-	this.roots.forEach(root => {
+	roots
+	.map(_root => walk({
+		root: _root,
+		rewrite: _rewrite
+	}))
+	.forEach(root => {
 
-		console.log('x', root)
+		console.log(root)
 
 	})
 }
 
-
-
-module.exports = rohtr;
+module.exports = rohtr
