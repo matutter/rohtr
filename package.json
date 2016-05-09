@@ -7,11 +7,9 @@
     "test": "tests"
   },
   "dependencies": {
-    "pug": "^2.0.0-alpha6",
     "rohtr-flatten": "^1.0.0",
     "rohtr-loader": "^1.0.0",
     "rohtr-walk": "^1.0.0",
-    "q": "^1.4.1"
   },
   "devDependencies": {},
   "scripts": {

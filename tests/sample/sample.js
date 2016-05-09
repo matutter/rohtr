@@ -1,4 +1,4 @@
-function onRender(req) {
+function getOptions(req) {
 
 	var options = {
 
@@ -9,4 +9,4 @@ function onRender(req) {
 	return options
 }
 
-module.exports.onRender = onRender
+module.exports.getOptions = getOptions
