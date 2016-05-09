@@ -1,10 +1,11 @@
 const options = {
 	roots : './tests/sample/',
 	rewrite: {
-		'sample' : '/'
+		'/sample' : '/'
 	}
 }
-const rohtr = require('../index.js')(options)
+const routes = require('../rohtr.js')(options)
 const log = console.log
 
+log(routes)
 
