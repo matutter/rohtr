@@ -8,7 +8,6 @@ function rohtr(o) {
 
 	var roots = o.roots
 	var _rewrite = o.rewrite || {}
-	var remove = o.remove || ['folders', 'parent', 'basename', 'files']
 	var _template = o.template || {}
 
 	if(typeof roots === 'string')

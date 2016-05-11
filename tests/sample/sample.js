@@ -1,4 +1,4 @@
-function getOptions(req) {
+function getLocals(req) {
 
 	var options = {
 
@@ -9,4 +9,4 @@ function getOptions(req) {
 	return options
 }
 
-module.exports.getOptions = getOptions
+module.exports.getLocals = getLocals
