@@ -1,6 +1,6 @@
 {
   "name": "rohtr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A router-preloader for nodejs http(s) servers. Walks directory structures and preloads modules and templates.",
   "main": "rohtr.js",
   "directories": {
