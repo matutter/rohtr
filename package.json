@@ -7,9 +7,9 @@
     "test": "tests"
   },
   "dependencies": {
-    "rohtr-flatten": "^1.0.0",
-    "rohtr-loader": "^1.0.0",
-    "rohtr-walk": "^1.0.0",
+    "rohtr-flatten": "1.0.0",
+    "rohtr-loader": "1.0.0",
+    "rohtr-walk": "1.0.0"
   },
   "devDependencies": {},
   "scripts": {

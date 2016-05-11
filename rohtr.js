@@ -1,6 +1,6 @@
-const walk = require('rohtr-walk')
-const load = require('rohtr-loader')
-const flatten = require('rohtr-flatten')
+const walk = require('./bin/rohtr-walk.js')
+const load = require('./bin/rohtr-loader.js')
+const flatten = require('./bin/rohtr-flatten.js')
 
 function rohtr(o) {
 	if(!o) 			throw 'Object expected'
