@@ -1,12 +1,15 @@
-function getLocals(req) {
 
+function SamplePage() {
+	this.title = 'Site Root'
+
+}
+
+
+SamplePage.prototype.getLocals = function(req) {
 	var options = {
-
-		title: '5AMPL3'
-
+		title: this.title
 	}
-
 	return options
 }
 
-module.exports.getLocals = getLocals
+module.exports = SamplePage

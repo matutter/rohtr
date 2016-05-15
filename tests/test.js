@@ -1,28 +1,57 @@
 const options = {
-	roots : './tests/sample/',
+	root : './tests/sample/',
 	rewrite: {
-		'/sample' : '/'
+		'sample' : '/'
 	},
-	template : { // object provided to template compiler
+	defaultUrl:  '/',
+	template : {
 		pretty: true
 	}
 }
 
 
 
-const routes = require('../rohtr.js')(options)
+const promise = require('../rohtr.js')(options)
 const log = console.log
 
-routes.forEach( route => {
+function test(router, url) {
+	console.log(url, '=', router.getRoute(url).name)
+}
 
-	if(route.module) {
+function onReady(router) {
 
-		var locals = route.module.getLocals()
-		var html = route.template(locals)
+	//walk(router.routes)
 
-		console.log( html )
-
+	try {
+		test(router, '/')
+		test(router, '/subfolder')
+		test(router, '/subfolderx')
+	} catch(e) {
+		console.log(e.stack)
 	}
+
+
+}
+
+function walk(routes) {
+
+	Object.keys(routes).forEach(name => {
+
+		var route = routes[name]
+		console.log(route)
+
+		if(route.render) {
+			console.log(route.render(route.getLocals()))
+		}
+
+	})
+}
+
+promise
+.then(onReady)
+.catch(e => {
+	
+	console.log(e)
 
 })
 
